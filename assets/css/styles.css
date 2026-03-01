@@ -191,7 +191,7 @@ a {
   padding: 6px 10px;
   border-radius: 6px;
   color: var(--muted);
-  transition: all .18s ease;
+  transition: all .4s ease;
 }
 
 .sidebar a:hover {
