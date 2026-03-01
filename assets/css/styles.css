@@ -188,15 +188,15 @@ a {
 #search {
   padding: 8px 12px;
   border-radius: 6px;
-  border: 1px solid #555;       /* default border */
   background: #1f1f23;
   color: white;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Focus state */
 #search:focus {
+  border: 1px solid;
   border-color: #8a67f3;
   box-shadow: 0 0 5px rgba(138,103,243,0.6);
 }
