@@ -252,21 +252,41 @@ a {
   height: 100%;
 }
 
-/* EXTERNAL LINK ICON */
+/* Button styling */
 .button.external {
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  align-items: center;          /* vertical center */
+  justify-content: center;
+  gap: 10px;                    /* space between text and icon */
+  padding: 10px 20px;
+  background: #8a67f3;          /* base purple */
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.external-icon {
-  display: inline-flex;
-  opacity: .7;
-  transition: transform .2s ease, opacity .2s ease;
+/* Hover animation */
+.button.external:hover {
+  transform: translateY(-3px) scale(1.03);  /* subtle lift + scale */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #8a67f3, #6f4fe0);
 }
 
-.button.external:hover .external-icon {
-  transform: translate(2px, -2px);
+/* External icon size + centering */
+.external-icon svg {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.85;
+}
+
+/* Icon hover animation */
+.button.external:hover .external-icon svg {
+  transform: translate(3px, -2px) scale(1.1);
   opacity: 1;
 }
 
