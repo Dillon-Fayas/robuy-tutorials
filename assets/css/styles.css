@@ -184,8 +184,24 @@ a {
   transform: scale(1.05);
 }
 
-/* STEP NAV LINKS */
+/* Search box */
+#search {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #555;       /* default border */
+  background: #1f1f23;
+  color: white;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
 
+/* Focus state */
+#search:focus {
+  border-color: #8a67f3;
+  box-shadow: 0 0 5px rgba(138,103,243,0.6);
+}
+
+/* STEP NAV LINKS */
 .sidebar a {
   display: block;
   padding: 6px 10px;
