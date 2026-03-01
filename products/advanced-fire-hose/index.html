@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced Fire Hose Tutorials</title>
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <style>
+    .layout {
+      display: flex;
+      gap: 30px;
+    }
+
+    .sidebar {
+      width: 260px;
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+    }
+
+    .sidebar input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      background: #22232a;
+      border: none;
+      border-radius: 6px;
+      color: white;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 6px 0;
+      color: #a0a3ad;
+      font-size: 14px;
+    }
+
+    .sidebar a.active {
+      color: #8a67f3;
+    }
+
+    .content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .product-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .product-header img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .step {
+      background: #22232a;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    .step.collapsed .step-body {
+      display: none;
+    }
+
+    .step h2 {
+      margin-bottom: 10px;
+    }
+
+    .video {
+      aspect-ratio: 16/9;
+      margin-top: 15px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <a href="/">← Tutorials</a>
+    <strong>Advanced Fire Hose</strong>
+  </div>
+</div>
+
+<div class="container">
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <input id="search" placeholder="Search steps...">
+      <div id="stepNav"></div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <div class="product-header">
+        <img src="/assets/images/advanced-fire-hose.png">
+        <h1>Advanced Fire Hose</h1>
+      </div>
+
+      <div id="tutorial"></div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="/assets/js/marked.min.js"></script>
+
+<script>
+async function loadTutorial() {
+  const res = await fetch("./tutorial.md");
+  const md = await res.text();
+
+  const html = marked.parse(md);
+  document.getElementById("tutorial").innerHTML = html;
+
+  buildSteps();
+  buildSidebar();
+}
+
+function buildSteps() {
+  const tutorial = document.getElementById("tutorial");
+  const headers = tutorial.querySelectorAll("h2");
+
+  headers.forEach((h, i) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "step";
+
+    const body = document.createElement("div");
+    body.className = "step-body";
+
+    h.parentNode.insertBefore(wrapper, h);
+    wrapper.appendChild(h);
+
+    let next = h.nextSibling;
+    while (next && next.tagName !== "H2") {
+      const temp = next.nextSibling;
+      body.appendChild(next);
+      next = temp;
+    }
+
+    wrapper.appendChild(body);
+
+    h.innerHTML = `Step ${i + 1}: ${h.innerText}`;
+
+    wrapper.onclick = e => {
+      if (e.target.tagName !== "A")
+        wrapper.classList.toggle("collapsed");
+    };
+
+    wrapper.id = "step-" + (i + 1);
+  });
+}
+
+function buildSidebar() {
+  const nav = document.getElementById("stepNav");
+  const steps = document.querySelectorAll(".step");
+
+  steps.forEach((step, i) => {
+    const title = step.querySelector("h2").innerText;
+
+    const link = document.createElement("a");
+    link.href = "#step-" + (i + 1);
+    link.textContent = title;
+
+    nav.appendChild(link);
+  });
+}
+
+document.getElementById("search").addEventListener("input", e => {
+  const value = e.target.value.toLowerCase();
+
+  document.querySelectorAll(".step").forEach(step => {
+    const text = step.innerText.toLowerCase();
+    step.style.display = text.includes(value) ? "block" : "none";
+  });
+});
+
+loadTutorial();
+</script>
+
+</body>
+</html>

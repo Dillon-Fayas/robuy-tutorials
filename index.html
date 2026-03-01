@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Poncake Tutorials</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <strong>Poncake Tutorials</strong>
+    <a href="/plugins/">Plugins</a>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Products</h1>
+  <div id="productList" class="grid"></div>
+</div>
+
+<script src="/data/products.js"></script>
+<script src="/assets/js/app.js"></script>
+
+<script>
+renderList("productList", products, "products");
+</script>
+
+</body>
+</html>

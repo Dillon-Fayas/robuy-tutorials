@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plugins</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <a href="/">← Tutorials</a>
+    <strong>Plugins</strong>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Compatible Plugins</h1>
+  <div id="pluginList" class="grid"></div>
+</div>
+
+<script src="/data/plugins.js"></script>
+<script src="/assets/js/app.js"></script>
+
+<script>
+renderList("pluginList", plugins, "plugins");
+</script>
+
+</body>
+</html>
