@@ -251,3 +251,21 @@ a {
   width: 100%;
   height: 100%;
 }
+
+/* EXTERNAL LINK ICON */
+.button.external {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.external-icon {
+  display: inline-flex;
+  opacity: .7;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.button.external:hover .external-icon {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
