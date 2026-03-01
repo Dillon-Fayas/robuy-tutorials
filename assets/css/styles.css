@@ -254,36 +254,63 @@ a {
 
 /* Base button */
 .button.external {
+  position: relative;
   display: inline-flex;
-  align-items: center;          /* vertical center */
+  align-items: center;
   justify-content: center;
   gap: 8px;
   padding: 10px 20px;
-  background: #8a67f3;          /* base purple */
+  background: #8a67f3;          /* fallback base color */
   color: white;
   font-weight: 500;
   border-radius: 8px;
   text-decoration: none;
-  transition: all 0.25s ease;
+  overflow: hidden;              /* contains pseudo-element */
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  z-index: 0;
 }
 
-/* Hover effect: subtle lift + gradient */
+/* Content wrapper to keep text above pseudo-element */
+.button.external .button-content {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Gradient hover using pseudo-element */
+.button.external::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #8a67f3, #6f4fe0);
+  border-radius: 8px;
+  opacity: 0;                    /* hidden by default */
+  transition: opacity 0.25s ease;
+  z-index: 0;                    /* behind text/icon */
+}
+
+/* Hover effects */
+.button.external:hover::before {
+  opacity: 1;                     /* fade in gradient */
+}
+
 .button.external:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  background: linear-gradient(135deg, #8a67f3, #6f4fe0);
 }
 
 /* External icon */
 .external-icon svg {
   width: 20px;
   height: 20px;
-  vertical-align: middle;        /* centers icon with text */
+  vertical-align: middle;
   transition: transform 0.2s ease;
 }
 
-/* Icon hover animation */
+/* Icon moves slightly on hover */
 .button.external:hover .external-icon svg {
   transform: translate(2px, -1px);
 }
