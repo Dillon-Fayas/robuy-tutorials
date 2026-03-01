@@ -33,7 +33,7 @@ function renderList(containerId, items, type) {
         <h3>${item.name}</h3>
         <p>${item.description}</p>
         <a class="button" href="${item.link}" target="_blank">
-          Download
+          Get Plugin
         </a>
       `;
 

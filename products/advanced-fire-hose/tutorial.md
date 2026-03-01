@@ -4,7 +4,9 @@ Download the asset from your purchase page.
 
 Import it into your project.
 
+<div class="video">
 <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
 
 ---
 
