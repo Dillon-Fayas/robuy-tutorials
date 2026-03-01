@@ -270,7 +270,7 @@ a {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Add a pseudo-element for gradient hover */
+/* Pseudo-element for gradient hover */
 .button.external::before {
   content: "";
   position: absolute;
@@ -279,13 +279,13 @@ a {
   border-radius: 8px;
   opacity: 0;
   transition: opacity 0.25s ease;
-  z-index: 0;
+  z-index: 0;       /* make sure it's behind the text/icon */
 }
 
 /* Button content above pseudo-element */
 .button.external > * {
   position: relative;
-  z-index: 1;
+  z-index: 1;       /* text and icon stay above the gradient */
 }
 
 /* Hover animation */
