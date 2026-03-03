@@ -72,7 +72,7 @@ function buildSteps() {
 
                     // Animate to 0 in next frame
                     requestAnimationFrame(() => {
-                    body.style.maxHeight = "0px";
+                        body.style.maxHeight = "0px";
                     });
 
                 } else {
@@ -84,19 +84,13 @@ function buildSteps() {
                     "transitionend",
                     () => {
                         if (!newDiv.classList.contains("collapsed")) {
-                        body.style.maxHeight = "none";
+                            body.style.maxHeight = "none";
                         }
                     },
                     { once: true }
                     );
                 }
             });
-
-            // step.onclick = e => {
-            //     if (e.target.tagName !== "A")
-            //         newDiv.classList.toggle("collapsed");
-            // };
-
         } else if (step) {
             step.querySelector(".step-body").appendChild(node);
         }
@@ -126,41 +120,41 @@ document.getElementById("search").addEventListener("input", e => {
     const matches = step.innerText.toLowerCase().includes(value);
 
     if (!matches && !step.classList.contains("collapsed")) {
-      // COLLAPSE
-      step.classList.add("collapsed");
+        // COLLAPSE
+        step.classList.add("collapsed");
 
-      // lock current height
-      body.style.maxHeight = body.scrollHeight + "px";
+        // lock current height
+        body.style.maxHeight = body.scrollHeight + "px";
 
-      // animate to 0
-      requestAnimationFrame(() => {
-        body.style.maxHeight = "0px";
-      });
+        // animate to 0
+        requestAnimationFrame(() => {
+            body.style.maxHeight = "0px";
+        });
 
     } else if (matches && step.classList.contains("collapsed")) {
-      // EXPAND
-      step.classList.remove("collapsed");
+        // EXPAND
+        step.classList.remove("collapsed");
 
-      // start from 0 if needed
-      body.style.maxHeight = "0px";
+        // start from 0 if needed
+        body.style.maxHeight = "0px";
 
-      // animate to full height
-      requestAnimationFrame(() => {
-        body.style.maxHeight = body.scrollHeight + "px";
-      });
+        // animate to full height
+        requestAnimationFrame(() => {
+            body.style.maxHeight = body.scrollHeight + "px";
+        });
 
-      // after transition, remove maxHeight so it can resize naturally
-      body.addEventListener(
+        // after transition, remove maxHeight so it can resize naturally
+        body.addEventListener(
         "transitionend",
         () => {
-          if (!step.classList.contains("collapsed")) {
+            if (!step.classList.contains("collapsed")) {
             body.style.maxHeight = "none";
-          }
+            }
         },
         { once: true }
-      );
+        );
     }
-  });
+    });
 });
 
 document.querySelectorAll('#stepNav a').forEach(link => {
