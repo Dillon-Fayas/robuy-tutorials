@@ -70,14 +70,15 @@
     max-height: 0;
     opacity: 0;
 }
-.step.collapsed .step h2 {
-    color: #514e5b;
-}
 
 .step h2 {
     color: #a49fb1;
     margin-bottom: 10px;
     transition: color 0.2s ease;
+}
+
+.step.collapsed h2 {
+    color: #514e5b;
 }
 
 .video {
