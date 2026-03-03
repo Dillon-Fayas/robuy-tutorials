@@ -4,7 +4,7 @@
 }
 
 .sidebar {
-    width: 260px;
+    width: 280px;
     position: sticky;
     top: 20px;
     height: fit-content;
@@ -29,6 +29,14 @@
 
 .sidebar a.active {
     color: #8a67f3;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
 }
 
 .content {
