@@ -59,6 +59,8 @@ function buildSteps() {
             step.appendChild(header);
             step.appendChild(body);
             tutorial.appendChild(step);
+            
+            body.style.maxHeight = body.scrollHeight + "px";
 
             expandButton.addEventListener("click", () => {
                 const isCollapsed = newDiv.classList.toggle("collapsed");
