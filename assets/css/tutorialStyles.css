@@ -35,6 +35,12 @@
     .layout {
         flex-direction: column;
     }
+    .sidebar {
+        background: var(--bg);
+        width: 100%;
+        top: 0;
+        z-index: 100;
+    }
 }
 
 .content {
