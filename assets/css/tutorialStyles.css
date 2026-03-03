@@ -76,10 +76,11 @@ iframe {
 }
 
 .toggle-btn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 14px;
     border: 1px solid #ccc;
     border-radius: 6px;
     background: #191a1f;
@@ -94,6 +95,8 @@ iframe {
 }
 
 .toggle-btn .icon {
+  width: 16px;
+  height: 16px;
   transition: transform 0.2s ease;
   transform-origin: 50% 50%;
 }
