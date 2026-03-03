@@ -68,7 +68,9 @@ function buildSteps() {
                     isCollapsed
                 );
                 if (isCollapsed) {
-                    body.style.maxHeight = body.scrollHeight + "px";
+                    if (!body.style.maxHeight || body.style.maxHeight === "none") {
+                        body.style.maxHeight = "0px";
+                    }
                     requestAnimationFrame(() => { body.style.maxHeight = "0px"; });
                 } else {
                     body.style.maxHeight = body.scrollHeight + "px";
@@ -123,7 +125,10 @@ document.getElementById("search").addEventListener("input", e => {
         } else if (matches && step.classList.contains("collapsed")) {
             // Expand
             step.classList.remove("collapsed");
-            body.style.maxHeight = body.scrollHeight + "px";
+
+            if (!body.style.maxHeight || body.style.maxHeight === "none") {
+                body.style.maxHeight = "0px";
+            }
 
             body.addEventListener(
                 "transitionend",
