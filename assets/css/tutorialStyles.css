@@ -32,10 +32,8 @@
 }
 
 @media (max-width: 900px) {
-    .sidebar {
-        position: static;
-        width: 100%;
-        margin-bottom: 2rem;
+    .layout {
+        flex-direction: column;
     }
 }
 
