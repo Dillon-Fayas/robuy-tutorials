@@ -63,20 +63,30 @@ function buildSteps() {
             expandButton.addEventListener("click", () => {
                 const isCollapsed = newDiv.classList.toggle("collapsed");
                 expandButton.classList.toggle("is-open");
-                expandButton.setAttribute(
-                    "aria-expanded",
-                    isCollapsed
-                );
+                expandButton.setAttribute("aria-expanded", !isCollapsed);
+
                 if (isCollapsed) {
-                    if (!body.style.maxHeight || body.style.maxHeight === "none") {
-                        body.style.maxHeight = "0px";
-                    }
-                    requestAnimationFrame(() => { body.style.maxHeight = "0px"; });
-                } else {
+                    // COLLAPSE
+                    // Lock current height first
                     body.style.maxHeight = body.scrollHeight + "px";
+
+                    // Animate to 0 in next frame
+                    requestAnimationFrame(() => {
+                    body.style.maxHeight = "0px";
+                    });
+
+                } else {
+                    // EXPAND
+                    body.style.maxHeight = body.scrollHeight + "px";
+
+                    // After transition, remove inline height for natural resizing
                     body.addEventListener(
                     "transitionend",
-                    () => { body.style.maxHeight = "none"; },
+                    () => {
+                        if (!newDiv.classList.contains("collapsed")) {
+                        body.style.maxHeight = "none";
+                        }
+                    },
                     { once: true }
                     );
                 }
@@ -109,36 +119,48 @@ function buildSidebar() {
 }
 
 document.getElementById("search").addEventListener("input", e => {
-    const value = e.target.value.toLowerCase().trim();
+  const value = e.target.value.toLowerCase().trim();
 
-    document.querySelectorAll(".step").forEach(step => {
-        const body = step.querySelector(".step-body");
-        const matches = step.innerText.toLowerCase().includes(value);
+  document.querySelectorAll(".step").forEach(step => {
+    const body = step.querySelector(".step-body");
+    const matches = step.innerText.toLowerCase().includes(value);
 
-        if (!matches && !step.classList.contains("collapsed")) {
-            // Collapse
-            step.classList.add("collapsed");
-            body.style.maxHeight = body.scrollHeight + "px";
-            requestAnimationFrame(() => {
-                body.style.maxHeight = "0px";
-            });
-        } else if (matches && step.classList.contains("collapsed")) {
-            // Expand
-            step.classList.remove("collapsed");
+    if (!matches && !step.classList.contains("collapsed")) {
+      // COLLAPSE
+      step.classList.add("collapsed");
 
-            if (!body.style.maxHeight || body.style.maxHeight === "none") {
-                body.style.maxHeight = "0px";
-            }
+      // lock current height
+      body.style.maxHeight = body.scrollHeight + "px";
 
-            body.addEventListener(
-                "transitionend",
-                () => {
-                    body.style.maxHeight = "none"; // natural height
-                },
-                { once: true }
-            );
-        }
-    });
+      // animate to 0
+      requestAnimationFrame(() => {
+        body.style.maxHeight = "0px";
+      });
+
+    } else if (matches && step.classList.contains("collapsed")) {
+      // EXPAND
+      step.classList.remove("collapsed");
+
+      // start from 0 if needed
+      body.style.maxHeight = "0px";
+
+      // animate to full height
+      requestAnimationFrame(() => {
+        body.style.maxHeight = body.scrollHeight + "px";
+      });
+
+      // after transition, remove maxHeight so it can resize naturally
+      body.addEventListener(
+        "transitionend",
+        () => {
+          if (!step.classList.contains("collapsed")) {
+            body.style.maxHeight = "none";
+          }
+        },
+        { once: true }
+      );
+    }
+  });
 });
 
 document.querySelectorAll('#stepNav a').forEach(link => {
