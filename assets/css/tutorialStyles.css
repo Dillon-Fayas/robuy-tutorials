@@ -36,6 +36,8 @@
         flex-direction: column;
     }
     .sidebar {
+        padding-top: 8px;
+        padding-bottom: 8px;
         background: var(--bg);
         width: 100%;
         top: 0;
