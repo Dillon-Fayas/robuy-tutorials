@@ -61,12 +61,20 @@ function buildSteps() {
             tutorial.appendChild(step);
 
             expandButton.addEventListener("click", () => {
+                const isCollapsed = newDiv.classList.toggle("collapsed");
                 expandButton.classList.toggle("is-open");
-                newDiv.classList.toggle("collapsed");
                 expandButton.setAttribute(
                     "aria-expanded",
-                    expandButton.classList.contains("is-open")
+                    isCollapsed
                 );
+                if (isCollapsed) {
+                    body.style.maxHeight = body.scrollHeight + "px";
+                    requestAnimationFrame(() => {
+                        body.style.maxHeight = "0px";
+                    });
+                } else {
+                    body.style.maxHeight = body.scrollHeight + "px";
+                }
             });
 
             // step.onclick = e => {

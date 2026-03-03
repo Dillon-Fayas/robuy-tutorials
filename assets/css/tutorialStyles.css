@@ -55,12 +55,28 @@
     cursor: default;
 }
 
+.step-body {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.2s ease;
+}
+
+.step:not(.collapsed) .step-body {
+  opacity: 1;
+}
+
 .step.collapsed .step-body {
     display: none;
 }
+.step.collapsed .step h2 {
+    color: #514e5b;
+}
 
 .step h2 {
+    color: #a49fb1;
     margin-bottom: 10px;
+    transition: color 0.2s ease;
 }
 
 .video {
