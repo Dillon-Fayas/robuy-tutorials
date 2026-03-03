@@ -21,8 +21,44 @@ Download Plugin:
 </a>
 </div>
 
-## Full Tutorial
+## Getting Started
 
 <div class="video">
 <iframe src="https://www.youtube.com/embed/ySaBV1iYI6U"></iframe>
+</div>
+
+## Team Whitelist
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+
+## Setting up a Truck
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+
+## Adding a Fire Hydrant
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+
+## Supply Hose
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+
+## Attack Hose
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+
+## All about Attachments
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
 </div>
