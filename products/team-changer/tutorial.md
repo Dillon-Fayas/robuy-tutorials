@@ -7,5 +7,5 @@ Open a **blank** baseplate project in Roblox Studio and drop the file in.
 ## Full Tutorial
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 </div>

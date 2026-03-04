@@ -11,5 +11,5 @@ Fire poles can be duplicated, repositioned, and resized, but beware that changin
 ## Full Tutorial
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/Z2gY7Ln0Sk0"></iframe>
+<iframe src="https://www.youtube.com/embed/Z2gY7Ln0Sk0" allowfullscreen></iframe>
 </div>

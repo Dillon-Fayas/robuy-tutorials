@@ -25,41 +25,41 @@ Download Plugin:
 ## Getting Started
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/qfY3FuUiBP0"></iframe>
+<iframe src="https://www.youtube.com/embed/qfY3FuUiBP0" allowfullscreen></iframe>
 </div>
 
 ## Team Whitelist
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/fdaaRp7suXE"></iframe>
+<iframe src="https://www.youtube.com/embed/fdaaRp7suXE" allowfullscreen></iframe>
 </div>
 
 ## Setting up a Truck
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 </div>
 
 ## Adding a Fire Hydrant
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 </div>
 
 ## Supply Hose
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 </div>
 
 ## Attack Hose
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 </div>
 
 ## All about Attachments
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
 </div>

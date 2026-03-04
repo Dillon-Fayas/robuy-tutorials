@@ -29,8 +29,10 @@ body {
 }
 
 .container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
   max-width: 1500px;
-  margin: auto;
   padding: 40px 24px;
 }
 
@@ -44,6 +46,11 @@ a {
 }
 
 .nav {
+  top: 0;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background: #15161a;
   border-bottom: 1px solid #2b2d36;
 }

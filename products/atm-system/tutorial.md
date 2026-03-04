@@ -31,5 +31,5 @@ If you wish to add ATMs, just duplicate the given ATMs and change the ATM ID fou
 ## In-Depth Tutorial
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/vDVDOVdD9A"></iframe>
+<iframe src="https://www.youtube.com/embed/vDVDOVdD9A" allowfullscreen></iframe>
 </div>

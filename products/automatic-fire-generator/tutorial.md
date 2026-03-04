@@ -25,5 +25,5 @@ Download Plugin:
 ## Full Tutorial
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/elyb-SbgF8E"></iframe>
+<iframe src="https://www.youtube.com/embed/elyb-SbgF8E" allowfullscreen></iframe>
 </div>

@@ -25,5 +25,5 @@ Download Plugin:
 ## Full Tutorial
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/52S925P-1sA"></iframe>
+<iframe src="https://www.youtube.com/embed/52S925P-1sA" allowfullscreen></iframe>
 </div>

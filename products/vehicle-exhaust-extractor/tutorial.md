@@ -8,7 +8,7 @@ Open a **blank** baseplate project in Roblox Studio and drop the file in.
 
 Exhaust extractors can be duplicated and repositioned in order to add more. The length of the extractor can also be adjusted. Watch this video to learn more about resizing extractors.
 <div class="video">
-<iframe src="https://www.youtube.com/embed/QS3ELQh1ofY"></iframe>
+<iframe src="https://www.youtube.com/embed/QS3ELQh1ofY" allowfullscreen></iframe>
 </div>
 
 ## Adding Connection Ports to Vehicles
@@ -25,12 +25,12 @@ To add a connection port to a vehicle, drop the ExhaustConnection part into the 
 
 Watch this video for help with making cosmetic changes to exhaust extractors
 <div class="video">
-<iframe src="https://www.youtube.com/embed/3dTNipYOpX4"></iframe>
+<iframe src="https://www.youtube.com/embed/3dTNipYOpX4" allowfullscreen></iframe>
 </div>
 
 This video will explain how to make the extractor not tween back to the center position after disconnecting from a vehicle.
 <div class="video">
-<iframe src="https://www.youtube.com/embed/CS08gKRsvrE"></iframe>
+<iframe src="https://www.youtube.com/embed/CS08gKRsvrE" allowfullscreen></iframe>
 </div>
 
 ## FS Chassis
