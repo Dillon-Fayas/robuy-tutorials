@@ -108,6 +108,18 @@ function buildSidebar() {
         link.href = "#step-" + (i + 1);
         link.textContent = title;
 
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const target = document.getElementById("step-" + (i + 1));
+            const y = target.getBoundingClientRect().top + window.scrollY - 60;
+
+            window.scrollTo({
+                top: y,
+                behavior: "smooth"
+            });
+        });
+
         nav.appendChild(link);
     });
 }
