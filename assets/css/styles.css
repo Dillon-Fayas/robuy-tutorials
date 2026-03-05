@@ -296,9 +296,9 @@ a {
 }
 
 /* Base button */
-.button {
+/* .button {
   cursor: default;
-}
+} */
 
 .button.external {
   position: relative;
