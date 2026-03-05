@@ -1,11 +1,34 @@
-## Installing your [PRODUCT NAME]
+## Installing your Emergency Services Radio
 
 Download the asset. If you purchased through Robuy, it was sent to your DMs on Discord. If you purchased with Payhip, you can retrieve it from your email.
 
 Open a **blank** baseplate project in Roblox Studio and drop the file in.
-
-## Full Tutorial
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+<br>
+<br>
+Download Plugin:
+<div>
+<a class="button external" href="https://create.roblox.com/store/asset/10368363581/Poncakes-Plugin" target="_blank" rel="noopener">
+    <span class="button-content">
+    Get Plugin
+    <span class="external-icon">
+        <svg viewBox="0 0 24 24">
+        <path fill="currentColor"
+            d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
+        <path fill="currentColor"
+            d="M5 5h6v2H7v10h10v-4h2v6H5z"/>
+        </svg>
+    </span>
+    </span>
+</a>
 </div>
+
+## Ungroup
+
+Use Poncake’s Plugin to ungroup each component in the location that corresponds with its name.
+
+
+## Team Whitelist
+Use Poncake’s Plugin to edit the teams that have access to the radio. The team whitelist file is found under the script in ServerScriptService.
+
+## Operation
+To operate the radio, press Left Alt to toggle activation, then send a message through the in-game messaging system.
