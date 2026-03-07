@@ -37,7 +37,7 @@ Download Plugin:
 ## Setting up a Truck
 
 <div class="video">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/pzyMrTaYPoE" allowfullscreen></iframe>
 </div>
 
 ## Adding a Fire Hydrant
