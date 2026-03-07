@@ -108,7 +108,7 @@ iframe {
 }
 
 .toggle-btn {
-    cursor: grab;
+    cursor: default;
     width: 30px;
     height: 30px;
     padding: 0;
