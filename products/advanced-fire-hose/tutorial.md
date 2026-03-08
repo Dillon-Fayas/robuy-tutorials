@@ -19,7 +19,7 @@ Download the following plugins:
         </svg>
     </span>
     </span>
-</a>
+</a><br>
 <a class="button external" href="https://create.roblox.com/store/asset/2867765019/Reclass-classic-the-original-Roblox-reclasser" target="_blank" rel="noopener">
     <span class="button-content">
     Get Reclass Plugin
@@ -32,7 +32,7 @@ Download the following plugins:
         </svg>
     </span>
     </span>
-</a>
+</a><br>
 <a class="button external" href="https://create.roblox.com/store/asset/16651031857/Tool-Grip-Visual-Editor" target="_blank" rel="noopener">
     <span class="button-content">
     Get Tool Grip Editor Plugin
